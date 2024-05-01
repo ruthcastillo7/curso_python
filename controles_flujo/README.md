@@ -14,3 +14,9 @@ if True:
     print("es verdad")
 ```
 ## ciclos
+son los controles de flujo que repiten codigo y si sintaxis es la siguiente
+>```
+python
+for n in range(1,11).
+print(n)
+```
