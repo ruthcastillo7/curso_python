@@ -7,11 +7,16 @@ if ingrese_edad < 18:
     print("eres menor de edad")
 #escribir un programa que almacene la cadena de caracteres contraseña en una variable,
 #pregunte al usuario por la contraseña e
-#imprima por pantalla si la contraseña introducida por el usuario coincide con la guardad en la variable
+#imprima por pantalla si la contraseña introducida por el usuario coincide con la guardada en la variable
 #sin tener en cuenta mayusculas y minusculas.
+guardada_variable="Ruthcashu22"
 contraseña:str=input("ingrese contraseña: ")
-print(id(contraseña))
+if paswor == contraseña:
+    print("contraseña correscta")
+else:
+    print("contraseña correcta")
 #escribir un programa que pida al usuario un numero entero positivo y muestre por
 #pantalla la cuenta atras desde ese numero hasta cero separados por comas.
 usuario:int=int(input("ingrese numero positivo: "))
-#print([:usuario])
+for usuario in range (1,usuario)
+print(usuario)
