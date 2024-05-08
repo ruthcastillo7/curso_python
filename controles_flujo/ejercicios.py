@@ -18,5 +18,9 @@ else:
 #escribir un programa que pida al usuario un numero entero positivo y muestre por
 #pantalla la cuenta atras desde ese numero hasta cero separados por comas.
 usuario:int=int(input("ingrese numero positivo: "))
-for usuario in range (1,usuario)
-print(usuario)
+resultado=""
+for i in range(usuario;-1,-1):
+    resultado += str(i)
+    if i >0:
+        resultado += ","
+print(resultado)
