@@ -63,8 +63,9 @@
 #y muestre sus indices
 #OJO: tiene que pedir al usuario 
 oracion:str=input("escriba una oracion con comas: ")
-contador:int=0
+#contador:int=0
 for i,l in enumerate(oracion):
     if l==",":
-    contador=contador+1
         print("soy una coma")
+#    contador=contador+1
+#print(f"la cantidad de comas que tengo es {contador}")
