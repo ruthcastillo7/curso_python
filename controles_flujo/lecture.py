@@ -98,5 +98,6 @@
 #oooo
 #uuuuu
 vocale:str=input(aeiou)
-for i in enumerate(a, ):
+for i in range(vocales):
+    if i=="a":
     print(i)
