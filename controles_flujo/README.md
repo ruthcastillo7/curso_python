@@ -38,3 +38,16 @@ edad_dos:int=int(input("escribe tu edad: "))
 respuesta: str="eres mayor" if edad_dos>18 else "eres menor"
 print(respuesta)
 ```
+
+clase de hoy 15/05/24
+1. `enumerate` consume mas memoria pero en oraciones largas es mas veloz que el range, pero si son cortos es mas lento
+oraciones largas: funciona mejor
+medianas: funciona mejor
+```python
+for i,l in enumerate("aeiou"):
+```
+2. `range` su comsumo de memoria en este caso es menos y mas veloz siempre y cuando sea una oracion corta
+oraciones pequeñas: es mas rapido
+```python
+for n in range(0,len(oracion)):
+```
