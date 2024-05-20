@@ -51,3 +51,15 @@ oraciones pequeñas: es mas rapido
 ```python
 for n in range(0,len(oracion)):
 ```
+
+clase de hoy 20/05/24
+## while
+es un mecanismo que usa `python` para repetir instrucciones, la sematica de esta sentencia es : `mientras se cumpla la funcion has algo`
+```python
+while (): #si lo que esta en parentecis es verdad entonces print
+#si es falso no entra a la ejecucion y cierra el programa
+   print
+```
+
+en `FOR` sabemos cuando termina, ya que tebnemos sus indices (se usa para recorrer textos o listas)
+en `WHILE` se usa cuando el ciclo necesita la intervencion de un  tercero para que termine la ejeccucion

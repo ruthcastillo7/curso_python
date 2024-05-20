@@ -97,7 +97,51 @@
 #iii
 #oooo
 #uuuuu
-vocale:str=input(aeiou)
-for i in range(vocales):
-    if i=="a":
-    print(i)
+# vocale:str=input(aeiou)
+# for i in range(vocales):
+#     if i=="a":
+#     print(i)
+
+# clase semana 7 (20/05/2024)
+#1.
+# condicion=True
+# while condicion:
+#     condicion=False
+#     print("hola")
+
+# #2. "continie" es una palabra reservada para los ciclos de while
+# "break" es una palabra reservada que nos permite fibnalizar con el bucle
+# O LA CONDICION PUEDE PASAR A FALSE
+# condicion=True
+# while condicion:
+#     eval=input("desea continuar [S/N]: ")
+#     if eval=="S":
+#         print("continuas en el bucle")
+#         continue
+#     else:
+#         print("se termino el programa")
+#         condicion=False #se puede usar condicion o break, solo uno
+#         #break
+
+#3.
+# contador=0
+# while contador<=5:
+#     print(contador)
+#     contador+=1
+# print(f"valor final {contador}")
+
+# #Metodos de string - array 
+# nombre="jose"
+# nombre.(uppwe()) #convierte el texto en mayuscula
+
+# apellidos="ALVAREZ"
+# print(apellidos.lower()) #convierte el texto a minuscula
+
+# segundo_nombre="luis"
+# print(segundo_nombre-capitalize()) #convierte la primera letra en mayuscula
+
+### 4. crear un programa que pida la cantidad de notas que se debe registrar
+#luego pedira las notas e imprima el promedio.
+notas:str=int(input("registre notas"))
+while condicion:
+    notas_registradas=input("pedir notas: ")
