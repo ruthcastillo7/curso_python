@@ -1,35 +1,43 @@
 # crear una lista de 5 alumnos alamacenaremos su nombre, apellido y edad
-lista_alumnos=[
-    {
+lista_alumnos=[{
         "nombre":"abel",
         "apellido":"rojas",
-        "edad":27,
+        "edad":27
     },{
         "nombre":"cielo",
-        "aoellido":"castro"
-        "edad":23,
+        "apellido":"castro",
+        "edad":23
     },{
         "nombre":"ruth",
-        "aoellido":"castillo"
-        "edad":18,
+        "apellido":"castillo",
+        "edad":18
     },{
         "nombre":"flor",
-        "aoellido":"lucana"
-        "edad":18,
+        "apellido":"lucana",
+        "edad":18
     },{
         "nombre":"rocio",
-        "aoellido":"lobo"
+        "apellido":"lobo",
         "edad":25
-    }
-    
-]
+}]
 # insertar al final de la lista los datos de antoni
-lista_alumnos.insert(4:
-                     "nombre":"antoni",
-                     "apellido":"cuevas"
-                     "edad":25)
+lista_alumnos.append({
+    "nombre":"antoni",
+    "apellido":"cuevas",
+    "edad":25
+})
+print(lista_alumnos)
 # eliminar de la lista si existe los datos de abel
-indice=lista_nombres.remove("nombre":"abel",
-                            "apellido":"rojas"
-                            "edad":27)
+lista_alumnos.remove({
+    "nombre":"abel",
+    "apellido":"rojas",
+    "edad":27
+})
+print(lista_alumnos)
 # buscar y mostrar el alumno en la posicion 4 de la lista
+indice=lista_alumnos.index({
+    "nombre":"rocio",
+    "apellido":"lobo",
+    "edad":25
+})
+print(lista_alumnos[indice])

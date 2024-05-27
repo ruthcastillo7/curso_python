@@ -72,7 +72,7 @@ lista_nombres.insert(0:"rocio") #["rocio","edith","ruth","luz"]
 lista_nombres=["edith","ruth","luz"]
 lista_nombres.pop() #["edith","ruth"]
 
-# Primera opcion - Metodo remove - este metodo elimine el poe el nombre el elememto que coincida dentro de mi lista
+# Primera opcion - Metodo remove - este metodo elimine el por el nombre el elememto que coincida dentro de mi lista
 #elimina por nombre o texto
 lista_nombres=["edith","ruth","luz"]
 lista_nombres.remove("ruth")
