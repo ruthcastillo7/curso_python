@@ -29,7 +29,11 @@ lista_alumnos=[
         "edad":13,
         "amigos":["flor","rocio"]
     },{
-
+        "nombre":"jose ma",
+        "edad":80,
+     },{
+        "nombre":"ronny",
+        "edad":18,
     }
     
     ]
@@ -89,4 +93,19 @@ indice=lista_nombres.index("ruth")
 print(lista_nombre[indice])
 
 pertenencia="edith" in lista_nombres #True False
+```
+
+29/05/2024
+# Tipos de datos estructurados (TDA - Tipos de datos)
+## Metodos
+### 5.Comparacion de listas
+podemos hacer uso de los operadores de comparaciom para comparar listas
+**Ejem:**
+``` python
+compara=[1,2,3]<[1,2,3]
+# 1 no porque son iguales en amabas listas
+# 2 no porque son iguales iguales en ambas listas
+# 3 evalua que menor a 4
+#entonces la primera lista es menor que la segunda lista
+print(compara) 
 ```
