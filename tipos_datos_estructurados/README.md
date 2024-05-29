@@ -109,3 +109,29 @@ compara=[1,2,3]<[1,2,3]
 #entonces la primera lista es menor que la segunda lista
 print(compara) 
 ```
+
+### 6. cuidado con las copias
+
+### 7. FE DE ERRATAS (Actualizar listas)
+``` python
+lista=[1.3,4,5,6]
+copia_lista=lista[0]=2
+print(copia_lista)
+#[2,3,4,5,6]
+#modificando lista con diccionario
+alumnos=[
+    {
+        "nombre":"abel",
+       "edad":15 
+    },
+    {
+        "nombre":"anthony"
+        "eada":29
+    }
+]
+#clave que quiero actualizar [0]["edad"]
+alumnos[0]["edad"]=30
+alumnos[0]={"nombre":"mafer","edad":15}
+alumnos[1]["sexo"]="por definir"
+#lo crea en el print que hago
+print(alumnos)

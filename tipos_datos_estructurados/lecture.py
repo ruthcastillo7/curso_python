@@ -37,7 +37,37 @@
 # nuevo_texto=texto_largo.split("_") #split quita el "_"
 # print(" ".join(nuevo_texto)) #quiero que juntes la frase pero con espacio y no con "_"
 
-#quiero convertirlo en lista en bace a un espacio
-texto_largo="este es un texto largo chiquita y chiquito"
-nuevo_texto=texto_largo.split(" ") #aqui se separa cada palabra en lista []
-print(" ".join(nuevo_texto)) #aqui indicamos con que indicador uniremos las palabras
+# #quiero convertirlo en lista en bace a un espacio
+# texto_largo="este es un texto largo chiquita y chiquito"
+# nuevo_texto=texto_largo.split(" ") #aqui se separa cada palabra en lista []
+# print(" ".join(nuevo_texto)) #aqui indicamos con que indicador uniremos las palabras
+
+###25/05/2024
+# dato primitivo
+# nombre="abel"
+# print(nombre)
+# otro_nombre=nombre
+# print(otro_nombre)
+
+# # dato estructurado (copia referencia de la direccion de memoria)
+# lista_original=[1,2,3,4]
+# copia_lista=lista_original
+
+# lista_original[-1]=15
+# print(copia_lista)
+
+
+# 1. crear un programa que reciva una lista desordenada
+#y muestre por teminal la lista ordenada y la lista previa a ser ordenada
+lista=[4,75,1,3,6,8,2]
+otra_variable=lista.sort()
+print(otra_variable) #[1,2,4,6,8,75]
+
+lista=[4,75,1,3,6,8,2]
+copia_lista=lista
+copia_lista=lista.copy() # .copy() : copia el valor de la lista
+copia_lista.sort() #.sort() : ordena una lista de mayor a menor
+print(lista)
+print(copia_lista)
+# [4,75,1,3,6,8,2]
+# [1,3,4,6,8,75]
