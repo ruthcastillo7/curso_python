@@ -46,7 +46,34 @@ print(lista_alumnos[indice])
 # 2. crear una lista con 4 diccionarios donde tendran los datos
 #de sus mascotas (nombre, edad, sexo, raza)
 
-#tareas
-#mostrar la losta con lolos 4 diccinarios
-#editar el 3er registro y cambiarle la edad sin modificar la lista original
-#mostrar la lista original y luego la lista con el 3er registro modificado
+mascotas=[
+{
+"nombre":"yuki",
+"edad":12,
+"sexo":"hembra",
+"raza":"poodle"
+},{
+"nombre":"hashiko",
+"edad":25,
+"sexo":"macho",
+"raza":"golden retriever"
+},{
+"nombre":"shiroku",
+"edad":21,
+"sexo":"macho",
+"raza":"husky"
+},{
+"nombre":"valky",
+"edad":12,
+"sexo":"hembra",
+"raza":"chihuahua"
+}]
+# tareas:
+# mostrar la lista con los 4 diccionarios
+print(mascotas)
+# editar el 3er registro y cambiarle la edad sin modificar la lista original
+mascotas[2]["edad"]=19
+#print(mascotas)
+# mostrar la lista original y luego la lista con el 3er registro modificado
+copia_mascotas=mascotas.copy()
+print(copia_mascotas)
