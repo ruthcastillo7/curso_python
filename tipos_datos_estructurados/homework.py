@@ -77,3 +77,61 @@ mascotas[2]["edad"]=19
 # mostrar la lista original y luego la lista con el 3er registro modificado
 copia_mascotas=mascotas.copy()
 print(copia_mascotas)
+
+
+# 03/05/2024
+# 1. un empresario de alquiler de motos desea guardar en una base de datos
+# la informacion de sus vehiculos, proceso que desea automatizar con un sistema
+# informatico, las acciones que puede realizar el empresario son ver la lista de autos
+# que tiene, podra tambien actualizar la lista y agregar un nuevo veiculo
+
+### casos de uso
+## como: empresario
+## quiero: guardar la informacion del alquiler de mis veiculos en una base de datos
+## para: automatizar el sistenma de acciones de mi empresa
+
+## como: empresario
+## quiero: ver y agregar nuevos autos si hacen falta
+## para: tener una informacion actualizada por cada cambio que realice
+
+
+### programacion
+
+## como: empresario
+## quiero: guardar la informacion del alquiler de mis veiculos en una base de datos
+## para: automatizar el sistenma de acciones
+autos=[
+{
+"marca":"toyota",
+"color":"negro",
+"precio/alquiler":10000
+},{ 
+"marca":"susuki",
+"color":"plomo",
+"precio/alquiler":12000
+},{ 
+"marca":"bentley",
+"color":"rojo", 
+"precio/alquiler":13000
+},{ 
+"marca":"arpsun",
+"color":"verde",
+"precio/alquiler":20000
+},{ 
+"marca":"honda",
+"color":"blanco",
+"precio/alquiler":14000
+}]
+
+## como: empresario
+## quiero: ver y agregar nuevos autos si hacen falta
+## para: tener una informacion actualizada por cada cambio que realice
+copia_autos=autos.copy()
+print(copia_autos)
+
+autos.append({
+    "marca":"subaru",
+"color":"negro/blanco",
+"precio/alquiler":11000
+})
+print(autos)
