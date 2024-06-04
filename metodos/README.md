@@ -9,7 +9,13 @@ int=int(input("variable: "))
 # INPUT almacena la informacion de una variable ya sea numero, texto, etc.
 # pero siempre se define si es int=int() o srt=int()
 
+int.from_bytes()
+>>> int.from_bytes(b'4f2','little') #3302964
+# from_bytes	Devuelve el entero representado por un array de bytes.
 
+int.real
+>>> (4).real #4
+# from_bytes	Devuelve el entero representado por un array de bytes.
 ```
 ## TEXTO
 ```PYTHON
