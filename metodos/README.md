@@ -74,7 +74,16 @@ lista_nombres.remove("ruth")
 ```
 ## TUPLAS
 ```PYTHON
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+x = thistuple.count(5)
+print(x)
+# El count()método devuelve el número de veces que aparece un valor específico en la tupla.
 
+thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+x = thistuple.index(8)
+print(x)
+# El index()método encuentra la primera aparición del valor especificado.
+# El index()método genera una excepción si no se encuentra el valor.
 ```
 
 ## DICCIONARIOS
