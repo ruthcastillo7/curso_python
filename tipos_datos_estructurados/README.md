@@ -114,7 +114,7 @@ print(compara)
 
 ### 7. FE DE ERRATAS (Actualizar listas)
 ``` python
-lista=[1.3,4,5,6]
+lista=[1,3,4,5,6]
 copia_lista=lista[0]=2
 print(copia_lista)
 #[2,3,4,5,6]
@@ -135,3 +135,19 @@ alumnos[0]={"nombre":"mafer","edad":15}
 alumnos[1]["sexo"]="por definir"
 #lo crea en el print que hago
 print(alumnos)
+
+### 05/06/2024
+### 7. Listas y diccionarios por comparacion: es una tecnica pythonica que nos permita
+### crear listas y diccionarios en una sola linea combinando bucles y deciciones.
+
+>[!NOTE] 
+>**vlc** value loop condicion - valor bucle condicion
+
+# lista por comprencion
+texto="1,4,8,9,6"
+nueva_lista=[int(n)for n in texto.split(",") if int (n)%2==0 ]            
+print(nueva_lista)
+# diccionarios por comprencion
+lista_amigos=["abel","antony","edith","ruth"]
+diccionarios={amigo:len(amigo) for amigo in lista_amigos}
+print(diccionario)
