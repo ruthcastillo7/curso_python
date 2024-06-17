@@ -122,4 +122,199 @@ alumnos("anthony","crucez","desaprobado")
 
 
 ### Desempaquetado/Empaquetado de argumentos (tarea)
+## EMPAQUETADO DE ARGUMENTOS
+
+Consiste en escribir un conjunto de datos (en este caso las tuplas) dentro de una variable. *Ejemplo:*
+python
+#1:
+```python
+edades=(10,20,30,40,50)
+print(type(edades))
+# <<class "tupla">
+
+#2:
+alturas=1.76,1.68,1.87,1.65,1.90
+print(type(alturas))
+# <<class "tupla">
+
+
+En ambos casos son tuplas y ya están empaquetadas, también podemos empaquetarlas de la siguiente manera: *Ejemplo:*
+python
+x=345
+y=656
+z=777
+variable=x,y,z
+print(variable)
+#(345,656,777)
+
+
+## DESEMPAQUETADO DE ARGUMENTOS
+
+En este caso hacemos todo lo contrario de lo anterior, en vez de empaquetar, nosotros desempaquetaremos los datos de una variable: *Ejemplo:*
+```python
+python
+edades=(10,20,30)
+x,y,z=edades
+print(x,y,z)
+#10,20,30
+
+Cómo podemos observar, cada datos de la variable edades se almacenaron en una letra y al imprimir ya no están dentro de una variable, y dejan de estar en una tupla ().
+
+En caso de tener más variables podemos hacer lo siguiente: *Ejemplo:*
+python
+edades=(10,20,30,40,50)
+x,_,_,_,z=edades
+print(x,z)
+#10,50
+## "x" tomo el primer dato y "z" el último dato
+
+
+## si imprimo (x,z,_) el guión bajo almacenará el último dato que está cerca a la `z` (el penultimo)
+
+edades=(10,20,30,40,50)
+x,_,_,_,z=edades
+print(x,z,_)
+#10,50,40
+
+
+Otra manera sería usando *_, está tomará el valor de los datos que yo no le asigne una letra, en este caso el 20,30,40 y al imprimir no dara errores. **Ejemplo:**
+python
+edades=(10,20,30,40,50)
+x,*_,z=edades
+print(x,z)
+#10,50
+
+#si imprimo `*_` :
+print(*_) #30,40,50
+
+
+
+También podemos desempaquetar usando listas:
+python
+alturas=[1.76,1.68,1.87,1.65,1.90]
+x,z,*_=alturas
+print(x)
+print(z)
+print(*_)
+# 1,76
+# 1,90
+# 1.68,1.87,1.65
+```
+### ARGUMENTOS POSICIONALES:
+Si utilizamos el operador * delante del nombre de un parámetro posicional, estaremos indicando que los argumentos pasados a la función se empaqueten en una tupla.
+Pero python nos presenta algunas limitaciones si solo ponemos: suma(4,3,2,1), por ello usaremos el siguiente método:
+```python
+def _suma(*values):
+    print(f'{values=}')
+    resultado = 0
+    for value in values:  # values es una tupla
+        resultado += value
+    return resultado
+
+
+_suma(4, 3, 2, 1)
+values=(4, 3, 2, 1)
+#10
+
+
+FUNCION PARA DESEMPAQUETAR:
+python
+values = (4, 3, 2, 1)
+_suma(*values)
+values=(4, 3, 2, 1)
+#10
+
+
+### ARGUMENTOS NOMINALES:
+
+Si utilizamos el operador ** delante del nombre de un parámetro nominal, estaremos indicando que los argumentos pasados a la función se empaqueten en un diccionario.
+
+Supongamos un ejemplo en el que queremos encontrar la persona con mayor calificación de un examen. Haremos uso del ** para empaquetar los argumentos nominales:
+
+python
+def best_student(**marks):
+    print(f'{marks=}')
+    max_mark = -1
+    for student, mark in marks.items():  # marks es un diccionario
+        if mark > max_mark:
+            max_mark = mark
+            best_student = student
+    return best_student
+
+
+best_student(ana=8, antonio=6, inma=9, javier=7)
+marks={'ana': 8, 'antonio': 6, 'inma': 9, 'javier': 7}
+'inma'
+
+Al igual que veíamos previamente, existe la posibilidad de usar doble asterisco ** en la llamada a la función para desempaquetar los argumentos nominales:
+
+python
+# Desempaquetado: best_student(ana=8, antonio=6, inma=9, javier=7)
+best_student(**marks)
+marks={'ana': 8, 'antonio': 6, 'inma': 9, 'javier': 7}
+'inma'
+
 ## Funciones internas de python (tarea)
+## FUNCIONES INTERNAS 
+1. La función max nos dice cuál es el “carácter más grande” de la cadena (que resulta ser la letra “u”), mientras que la función min nos muestra el carácter más pequeño (que en ese caso es un espacio).
+python
+max('¡Hola, mundo!')
+# 'u'
+min('¡Hola, mundo!')
+# ' '
+
+
+2. len cuenta la cantidad de caracteres de un argumento.
+python
+len('Hola, mundo')
+#11
+
+3. Función isinstance(), es una función complementaria de type
+python
+# es como preguntar a python: ¿El valor es un string(otros valores)?, por lo que el programa responderá con True o False:
+a="hola"
+b=100
+print(isinstance(a,string))
+#True
+
+4. La función abs()  devuelve el valor absoluto del número especificado.
+python
+x = abs(3+5j)
+
+5. La función all() devuelve Verdadero si todos los elementos de un iterable son verdaderos; de lo contrario, devuelve Falso. Si el objeto iterable está vacío, all() también devuelve Verdadero. No importa si son listas, tuplas, conjuntos, o diccionarios, si tiene 0, su resultado será False
+python
+mylist = [0, 1, 1]
+x = all(mylist)
+
+6. La función any() devuelve Verdadero si algún elemento de un iterable es verdadero; de lo contrario, devuelve Falso. Si el objeto iterable está vacío, la any() función devolverá Falso.
+python
+mydict = {0 : "Apple", 1 : "Orange"}
+x = any(mydict) #True
+# en los diccionarios está función verifica las claves, no lo valores.
+
+7. La round()función devuelve un número de coma flotante, y lo redondea a entero.
+python
+x = round(5.76543)
+print(x) #6
+
+8. La función reversed() devuelve un objeto iterador invertido.
+python
+alph = ["a", "b", "c", "d"]
+ralph = reversed(alph)
+for x in ralph:
+  print(x) #dcba
+
+9. La función zip() devuelve un objeto zip, que es un iterador de tuplas donde el primer elemento de cada iterador pasado se empareja, y luego el segundo elemento de cada iterador pasado se empareja, etc. Si los iterables pasados tienen longitudes diferentes, el iterable con la menor cantidad de elementos decide la longitud del nuevo iterador.
+python
+a = ("John", "Charles", "Mike")
+b = ("Jenny", "Christy", "Monica")
+
+x = zip(a, b)
+# (('John', 'Jenny'), ('Charles', 'Christy')
+
+10. La función sorted() devuelve una lista ordenada del objeto iterable especificado. Puede especificar orden ascendente o descendente. Las cadenas se ordenan alfabéticamente y los números se ordenan numéricamente.
+python
+a = ("b", "g", "a", "d", "f", "c", "h", "e")
+x = sorted(a)
+print(x)
+# ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
