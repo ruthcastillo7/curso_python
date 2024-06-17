@@ -121,7 +121,7 @@ alumnos("anthony","crucez","desaprobado")
 ```
 
 
-### Desempaquetado/Empaquetado de argumentos (tarea)
+### Desempaquetado/Empaquetado de argumentos (tarea) 17/06/2024
 ## EMPAQUETADO DE ARGUMENTOS
 
 Consiste en escribir un conjunto de datos (en este caso las tuplas) dentro de una variable. *Ejemplo:*
@@ -151,7 +151,6 @@ print(variable)
 ## DESEMPAQUETADO DE ARGUMENTOS
 
 En este caso hacemos todo lo contrario de lo anterior, en vez de empaquetar, nosotros desempaquetaremos los datos de una variable: *Ejemplo:*
-```python
 python
 edades=(10,20,30)
 x,y,z=edades
@@ -253,69 +252,87 @@ python
 best_student(**marks)
 marks={'ana': 8, 'antonio': 6, 'inma': 9, 'javier': 7}
 'inma'
-
+```
 ## Funciones internas de python (tarea)
 ## FUNCIONES INTERNAS 
-1. La función max nos dice cuál es el “carácter más grande” de la cadena (que resulta ser la letra “u”), mientras que la función min nos muestra el carácter más pequeño (que en ese caso es un espacio).
-python
+
+1. La función `max` nos dice cuál es el “carácter más grande” de la cadena (que resulta ser la letra “u”), mientras que la función `min` nos muestra el carácter más pequeño (que en ese caso es un espacio).
+```python
 max('¡Hola, mundo!')
 # 'u'
 min('¡Hola, mundo!')
 # ' '
+```
 
-
-2. len cuenta la cantidad de caracteres de un argumento.
-python
+2. `len` cuenta la cantidad de caracteres de un argumento.
+```python
 len('Hola, mundo')
 #11
-
-3. Función isinstance(), es una función complementaria de type
-python
+```
+3. Función `isinstance()`, es una función complementaria de type
+```python
 # es como preguntar a python: ¿El valor es un string(otros valores)?, por lo que el programa responderá con True o False:
 a="hola"
 b=100
 print(isinstance(a,string))
 #True
+```
 
-4. La función abs()  devuelve el valor absoluto del número especificado.
-python
+4. La función `abs()`  devuelve el valor absoluto del número especificado.
+```python
 x = abs(3+5j)
+```
 
-5. La función all() devuelve Verdadero si todos los elementos de un iterable son verdaderos; de lo contrario, devuelve Falso. Si el objeto iterable está vacío, all() también devuelve Verdadero. No importa si son listas, tuplas, conjuntos, o diccionarios, si tiene 0, su resultado será False
-python
+5. La función `all()` devuelve Verdadero si todos los elementos de un iterable son verdaderos; de lo contrario, devuelve Falso. Si el objeto iterable está vacío, all() también devuelve Verdadero. No importa si son listas, tuplas, conjuntos, o diccionarios, si tiene 0, su resultado será False
+```python
 mylist = [0, 1, 1]
 x = all(mylist)
+```
 
-6. La función any() devuelve Verdadero si algún elemento de un iterable es verdadero; de lo contrario, devuelve Falso. Si el objeto iterable está vacío, la any() función devolverá Falso.
-python
+6. La función `any()` devuelve Verdadero si algún elemento de un iterable es verdadero; de lo contrario, devuelve Falso. Si el objeto iterable está vacío, la any() función devolverá Falso.
+```python
 mydict = {0 : "Apple", 1 : "Orange"}
 x = any(mydict) #True
 # en los diccionarios está función verifica las claves, no lo valores.
+```
 
-7. La round()función devuelve un número de coma flotante, y lo redondea a entero.
-python
+1. La función `round()` devuelve un número de coma flotante, y lo redondea a entero.
+```python
 x = round(5.76543)
 print(x) #6
+```
 
-8. La función reversed() devuelve un objeto iterador invertido.
-python
+1. La función reversed() devuelve un objeto iterador invertido.
+```python
 alph = ["a", "b", "c", "d"]
 ralph = reversed(alph)
 for x in ralph:
   print(x) #dcba
+```
 
-9. La función zip() devuelve un objeto zip, que es un iterador de tuplas donde el primer elemento de cada iterador pasado se empareja, y luego el segundo elemento de cada iterador pasado se empareja, etc. Si los iterables pasados tienen longitudes diferentes, el iterable con la menor cantidad de elementos decide la longitud del nuevo iterador.
-python
+1. La función `zip()` devuelve un objeto zip, que es un iterador de tuplas donde el primer elemento de cada iterador pasado se empareja, y luego el segundo elemento de cada iterador pasado se empareja, etc. Si los iterables pasados tienen longitudes diferentes, el iterable con la menor cantidad de elementos decide la longitud del nuevo iterador.
+```python
 a = ("John", "Charles", "Mike")
 b = ("Jenny", "Christy", "Monica")
 
 x = zip(a, b)
 # (('John', 'Jenny'), ('Charles', 'Christy')
-
-10. La función sorted() devuelve una lista ordenada del objeto iterable especificado. Puede especificar orden ascendente o descendente. Las cadenas se ordenan alfabéticamente y los números se ordenan numéricamente.
-python
+```
+10. La función `sorted()` devuelve una lista ordenada del objeto iterable especificado. Puede especificar orden ascendente o descendente. Las cadenas se ordenan alfabéticamente y los números se ordenan numéricamente.
+```python
 a = ("b", "g", "a", "d", "f", "c", "h", "e")
 x = sorted(a)
 print(x)
 # ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
-fin
+```
+
+## Funciones internas de python (tarea)
+
+- `int()` -> funcion que resive por parametro un texto y lo convierte a un entero
+- `float`
+## Tipos de Funciones
+### Funciones anonimas (Funciones lambda)
+una funcion 
+### Funciones closure
+
+### Funciones callback

@@ -32,27 +32,46 @@
 
 
 # 1. crear una funcion que reciba por lista de numeros y me devuelva el
-# numero menor, mostrar para terminal el valor retornado por la funcion
-lista=[4,3,6,78,7]
-def Min(l):
-    minimo=l[0]
-    for n in l:
-        if n < minimo:
-            minimo=n
-        return minimo
-print(Min(lista))
-# 2. Crear una funcion que reciba como parametro el nombre y la edad de una persona
-# mi funcion debera retornar un diccionario con los datos, luego mostrar por
-# terminal el valor de retorno de mi funcion
-nom=input("ingrese su nombre: ")
-edad=int(input("ingrese su edad: "))
-def persona(nom,edad):
-    # return {
-    #     "nombre":nom,
-    #     "edad":edad
-    #     }
-    return dict(
-        nombre=nom,
-        edad=edad
-    )
-print(persona(nombre,edad))
+# # numero menor, mostrar para terminal el valor retornado por la funcion
+# lista=[4,3,6,78,7]
+# def Min(l):
+#     minimo=l[0]
+#     for n in l:
+#         if n < minimo:
+#             minimo=n
+#         return minimo
+# print(Min(lista))
+# # 2. Crear una funcion que reciba como parametro el nombre y la edad de una persona
+# # mi funcion debera retornar un diccionario con los datos, luego mostrar por
+# # terminal el valor de retorno de mi funcion
+# nom=input("ingrese su nombre: ")
+# edad=int(input("ingrese su edad: "))
+# def persona(nom,edad):
+#     # return {
+#     #     "nombre":nom,
+#     #     "edad":edad
+#     #     }
+#     return dict(
+#         nombre=nom,
+#         edad=edad
+#     )
+# print(persona(nombre,edad))
+
+
+#17/06/2024
+#esto es un argumento posisional
+def num_pares(*args):
+    lista_pares=[]
+    for n in args:
+        if n%2==0:
+            lista_pares.append(n)
+    return lista_pares
+#por comprencion
+#return [n for n in args if n%2==0]
+print(num_pares(8,5,4,7,9,25,4,7,12)) #[8, 4, 4, 12]
+
+#empaquetado y desempaquetado de argumento nominales
+def alumnos(**kwargs):
+    kwargs["nombre"]="abel"
+    print(kwargs)
+alumnos(nombre="miguel",apellido="largo",edad=30) #'nombre':'miguel','apellido':'largo','edad':'30'}
