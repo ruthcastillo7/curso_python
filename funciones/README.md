@@ -332,7 +332,29 @@ print(x)
 - `float`
 ## Tipos de Funciones
 ### Funciones anonimas (Funciones lambda)
-una funcion 
+una funcion que no tiene nombre
+
 ### Funciones closure
+una funcion que dentro tiene una funcion
 
 ### Funciones callback
+reciben por parametro otra funcion
+
+### Programacion funcional
+no requiere que yo sepa lo que el programa hace
+```python
+#programacion iterativa
+lista=[5,7,8,4,1]
+def num_minimo(l):
+    minimo=l[0]
+    for n in l:
+        if n < minimo:
+            minimo=n
+    return minimo
+# programacion funcional
+min(lista)
+
+```
+
+### tarea: averiguar y subir a GIT sobre map(), filter(), reduce()
+# concepto y ejemplos

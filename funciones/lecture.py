@@ -59,19 +59,53 @@
 
 
 #17/06/2024
-#esto es un argumento posisional
-def num_pares(*args):
-    lista_pares=[]
-    for n in args:
-        if n%2==0:
-            lista_pares.append(n)
-    return lista_pares
-#por comprencion
-#return [n for n in args if n%2==0]
-print(num_pares(8,5,4,7,9,25,4,7,12)) #[8, 4, 4, 12]
+# #esto es un argumento posisional
+# def num_pares(*args):
+#     lista_pares=[]
+#     for n in args:
+#         if n%2==0:
+#             lista_pares.append(n)
+#     return lista_pares
+# #por comprencion
+# #return [n for n in args if n%2==0]
+# print(num_pares(8,5,4,7,9,25,4,7,12)) #[8, 4, 4, 12]
 
-#empaquetado y desempaquetado de argumento nominales
-def alumnos(**kwargs):
-    kwargs["nombre"]="abel"
-    print(kwargs)
-alumnos(nombre="miguel",apellido="largo",edad=30) #'nombre':'miguel','apellido':'largo','edad':'30'}
+# #empaquetado y desempaquetado de argumento nominales
+# def alumnos(**kwargs):
+#     kwargs["nombre"]="abel"
+#     print(kwargs)
+# alumnos(nombre="miguel",apellido="largo",edad=30) #'nombre':'miguel','apellido':'largo','edad':'30'}
+
+##24/06/2024
+## Ejercicios de lambda
+# saludo=lambda:"hola"
+# print(saludo())
+
+# saludo=lambda n,a:f"hola, {n, {a}"
+# print(saludo("ruth","castillo"))
+
+#crear un programa anonimo que reciba como parametro
+#una lista de 5 numerros y retorne dos listas
+# una con los numeros pares y otra con numeros impares
+
+# #forma 1:
+# lista=[1,2,3,4,5,47,7,10,8]
+# pares=lambda l:[n for in lista if n%2==0]
+# impares=lambda l:[n for in lista if n%2!=0]
+# print(pares(lista))
+# print(impares(lista))
+
+# # forma 2: usar diccionario por comprecion TAREA
+# lista=[1,2,3,4,5,47,7,10,8]
+# pares=lambda l:[n for n in lista if n%2==0] 
+# impares=lambda l:[n for n in lista if n%2!=0]
+# print(pares(lista))
+# print(impares(lista))
+
+#funcion callnback
+def mensaje(m):
+    print(m)
+def pedir_nombre():
+    nombre=input("ingresa tu nombre")
+    return nombre
+mensaje(pedir_nombre())
