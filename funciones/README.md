@@ -333,12 +333,22 @@ print(x)
 ## Tipos de Funciones
 ### Funciones anonimas (Funciones lambda)
 una funcion que no tiene nombre
+```python
+lambda:"hola"
+```
 
 ### Funciones closure
 una funcion que dentro tiene una funcion
+```python
+def saludo(nombre):
+    print(f"bienbenido{nombre}")
+```
 
 ### Funciones callback
 reciben por parametro otra funcion
+```python
+int(input("ingrese un numero: "))
+```
 
 ### Programacion funcional
 no requiere que yo sepa lo que el programa hace
