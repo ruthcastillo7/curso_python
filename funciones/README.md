@@ -368,3 +368,101 @@ min(lista)
 
 ### tarea: averiguar y subir a GIT sobre map(), filter(), reduce()
 # concepto y ejemplos
+
+## TAREA: ENFOQUE FUNCIONAL
+## map()
+La función map() ejecuta una función específica para cada elemento en un iterable. El elemento se envía a la función como parámetro.
+Esta función aplica otra función sobre cada elemento de un iterable. Supongamos que queremos aplicar la siguiente función: 
+```python
+def f(x):
+    return x**2 / 2
+data = range(1, 11)
+map_gen = map(f, data)
+type(map_gen)
+map
+list(map_gen)
+[0.5, 2.0, 4.5, 8.0, 12.5, 18.0, 24.5, 32.0, 40.5, 50.0]
+```
+> [!NOTE]
+Hay que tener en cuenta que map() devuelve un generador, no directamente una lista.
+
+Podemos obtener el mismo resultado aplicando una función anónima «lambda»:
+```python
+list(map(lambda x: x**2 / 2, data))
+[0.5, 2.0, 4.5, 8.0, 12.5, 18.0, 24.5, 32.0, 40.5, 50.0]
+```
+En Python es posible «simular» un map() a través de una lista por comprensión:
+```python
+[x**2 / 2 for x in data]
+[0.5, 2.0, 4.5, 8.0, 12.5, 18.0, 24.5, 32.0, 40.5, 50.0]
+
+# otro ejemplo:
+# Calcule la longitud de cada palabra en la tupla:
+def myfunc(n):
+  return len(n)
+x = map(myfunc, ('apple', 'banana', 'cherry'))
+print(x)
+#convertir el mapa en una lista, para facilitar la lectura:
+print(list(x))
+# <map object at 0x1493705c4130>
+# [5, 6, 6]
+```
+## filter()
+La funcion filter() devuelve un iterador donde los elementos se filtran a través de una función para probar si el elemento se acepta o no.
+Esta función selecciona aquellos elementos de un iterable que cumplan una determinada condición. Supongamos que queremos seleccionar sólo aquellos números impares dentro de un rango:
+```python
+def odd_number(x):
+    return x % 2 == 1
+data = range(1, 21)
+filter_gen = filter(odd_number, data)
+type(filter_gen)
+filter
+list(filter_gen)
+[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+```
+> [!NOTE]
+Hay que tener en cuenta que filter() devuelve un generador, no directamente una lista.
+
+Podemos obtener el mismo resultado aplicando una función anónima «lambda»:
+```python
+list(filter(lambda x: x % 2 == 1, data))
+[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+```
+En Python es posible «simular» un filter() a través de una lista por comprensión:
+```python
+[x for x in data if x % 2 == 1]
+[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+
+# otro ejemplo:
+# Filtre la matriz y devuelva una nueva matriz con solo los valores iguales o superiores a 18:
+ages = [5, 12, 17, 18, 24, 32]
+def myFunc(x):
+  if x < 18:
+    return False
+  else:
+    return True
+adults = filter(myFunc, ages)
+for x in adults:
+  print(x)
+# 18
+# 24
+# 32
+
+```
+## reduce()
+Para poder usar esta función debemos usar el módulo functools. Nos permite aplicar una función dada sobre todos los elementos de un iterable de manera acumulativa. O dicho en otras palabras, nos permite reducir una función sobre un conjunto de valores. Supongamos que queremos realizar el producto de una serie de valores aplicando este enfoque:
+```python
+from functools import reduce
+def mult_values(a, b):
+    return a * b
+data = range(1, 6)
+reduce(mult_values, data)  # ((((1 * 2) * 3) * 4) * 5)
+120
+```
+Aplicando una función anónima «lambda»…
+```python
+reduce(lambda x, y: x * y, data)
+120
+```
+> [!NOTE]
+Por cuestiones de legibilidad del código, se suelen preferir las listas por comprensión a funciones como map() o filter(), aunque cada problema tiene sus propias características y sus soluciones más adecuadas. Es un enfoque «más pitónico».

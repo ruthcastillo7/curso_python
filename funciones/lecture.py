@@ -95,12 +95,12 @@
 # print(pares(lista))
 # print(impares(lista))
 
-# # forma 2: usar diccionario por comprecion TAREA
-# lista=[1,2,3,4,5,47,7,10,8]
-# pares=lambda l:[n for n in lista if n%2==0] 
-# impares=lambda l:[n for n in lista if n%2!=0]
-# print(pares(lista))
-# print(impares(lista))
+# forma 2: usar diccionario por comprecion TAREA
+lista=[1,2,3,4,5,47,7,10,8]
+pares=lambda l:[n for n in lista if n%2==0] 
+impares=lambda l:[n for n in lista if n%2!=0]
+print(pares(lista))
+print(impares(lista))
 
 #funcion callnback
 def mensaje(m):
