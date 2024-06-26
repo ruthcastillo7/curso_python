@@ -101,6 +101,10 @@
 # impares=lambda l:[n for n in lista if n%2!=0]
 # print(pares(lista))
 # print(impares(lista))
+# tarea: forma 3
+lista=[1,2,3,4,5,47,7,10,8]
+separar_pares,separar_impares = lambda lista: [num for num in lista if num % 2 == 0], lambda lista: [num for num in lista if num % 2 != 0]
+print(separar_pares(lista), separar_impares(lista))
 
 # #funcion callnback
 # def mensaje(m):
