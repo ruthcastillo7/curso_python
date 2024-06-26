@@ -96,16 +96,81 @@
 # print(impares(lista))
 
 # forma 2: usar diccionario por comprecion TAREA
-lista=[1,2,3,4,5,47,7,10,8]
-pares=lambda l:[n for n in lista if n%2==0] 
-impares=lambda l:[n for n in lista if n%2!=0]
-print(pares(lista))
-print(impares(lista))
+# lista=[1,2,3,4,5,47,7,10,8]
+# pares=lambda l:[n for n in lista if n%2==0] 
+# impares=lambda l:[n for n in lista if n%2!=0]
+# print(pares(lista))
+# print(impares(lista))
 
-#funcion callnback
-def mensaje(m):
-    print(m)
-def pedir_nombre():
-    nombre=input("ingresa tu nombre")
-    return nombre
-mensaje(pedir_nombre())
+# #funcion callnback
+# def mensaje(m):
+#     print(m)
+# def pedir_nombre():
+#     nombre=input("ingresa tu nombre")
+#     return nombre
+# mensaje(pedir_nombre())
+
+## 26/06/24
+# MAP ()
+# lista=[4,7,8,5,2]
+# nueva_lista=list(map(lambda x:x+1,lista))
+# #por defecto retorna una lista
+# print(nueva_lista)
+
+# tengo una lista de alumnoslos que todos ellos aprovaron y
+# pasan al tercer semestre.
+# en mi lista todos estan con el segundo semestre
+# por lo que tendremos que crear una solucion
+# que cambie el campo de semestre de 2 a 3
+# lista_alumnos=[
+#     {
+#         "nombre":"abel",
+#         "edad":36,
+#         "semestre":2
+#     },
+#     {
+#         "nombre":"anthony",
+#         "edad":40,
+#         "semestre":2
+#     },
+#       {
+#         "nombre":"edith",
+#         "edad":50,
+#         "semestre":2
+#     },
+# ]
+# # Quiero agregar carrera
+# def objeto(e):
+#     if"semestre" in e:
+#         e["semestre"]=e["semestre"]+1
+#     e["carrera"]="APSTI"
+#     return [
+#         e
+#     ]
+# semestre_actualizados=list(map(objeto,lista_alumnos))
+# print(semestre_actualizados)
+
+# # FILTER ()
+# # devueklve los numeros pares de una lista
+# lista=[4,8,2,5,7,10,6,5,3,30]
+# nueva_lista=list(filter(lambda x:x%2==0,lista))
+# print(nueva_lista)
+lista_alumnos=[
+    {
+        "nombre":"abel",
+        "edad":36,
+        "semestre":2
+    },
+    {
+        "nombre":"anthony",
+        "edad":40,
+        "semestre":2
+    },
+      {
+        "nombre":"edith",
+        "edad":50,
+        "semestre":2
+    },
+]
+lista_filtrada=list(filter(lambda x:x["edad"]<50,lista_alumnos))
+print(lista_filtrada)
