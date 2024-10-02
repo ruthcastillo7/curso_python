@@ -29,7 +29,7 @@
 # sus metodos seran ingresar origen, ingresar destino, cancelar viaje, ver estado de pasaje
 
 class Agencia:
-    def __init__(self,nombre,apellido,dni,numero_asiento,fecha_viaje):
+    def init(self,nombre,apellido,dni,numero_asiento,fecha_viaje):
         self.nombre=nombre
         self.apellido=apellido
         self.dni=dni
@@ -43,9 +43,10 @@ class Agencia:
     def cancelar_viaje(self):
         print("viaje cancelado")
     def estado_viaje(self):
-        print("ver su estado de viaje")
+        print("ver su estado de viaje: ")
 
-ruth=Banco("ruth","castillo",60414454,12,10/10/24)
-ruth.origen(puquio)
-ruth.destino(arequipa)
-ruth.ver()
+ruth=Agencia("ruth","castillo",60414454,5,2/10/24)
+ruth.estado_viaje()
+ruth.origen("puquio")
+ruth.destino("arequipa")
+ruth.cancelar_viaje()
