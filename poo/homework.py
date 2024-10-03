@@ -1,7 +1,7 @@
 # EJERCICIO 1
 # Crear una clase Banco
-# sus atributos seran nombre, apllidos, dni, numero de cuenta y saldo inicial
-# como metodos podemos hacer deposito retirar dinero y ver estado de cuenta
+# sus atributos seran nombre (name), apllidos (lastname), dni (cui), numero de cuenta (acount) y saldo inicial (amount)
+# como metodos podemos hacer deposito (deposit) retirar dinero (remove cash) y ver estado de cuenta (status acount)
 
 class Banco:
     def __init__(self,nombre,apellido,dni,numero_cuenta,saldo_inicial):
@@ -18,10 +18,12 @@ class Banco:
     def ver(self):
         print("ve su estado de cuenta")
 
-ruth=Banco("ruth","castillo",60414454,2324-2342-3334,100)
+ruth=Banco("ruth","castillo",60414454,2324-2342-3334,100) # llamas a la clase banco es INSTANCIAR 
 ruth.deposita(200)
 ruth.retirar(90)
 ruth.ver()
+
+
 
 # EJERCICIO 2
 # Crear una clase agencia
