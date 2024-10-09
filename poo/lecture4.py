@@ -14,7 +14,9 @@ class Banco:
             #este mensaje debe ser manejado por otro metodo
             return "no cuentas con saldo suficiente"
         self.amount-=amount
-        
+
+
+
     def status_acount(self):
         #este mensaje deberia mostrar el historial de depositos y retiros
         response=f"""
